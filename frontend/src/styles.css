@@ -1,0 +1,198 @@
+/* Guestly Design System — warm restaurant palette */
+:root {
+  --color-primary: #722F37;
+  --color-primary-dark: #5a252c;
+  --color-primary-light: #8d3a44;
+  --color-accent: #C9A84C;
+  --color-accent-dark: #a8893c;
+  --color-bg: #FAF8F5;
+  --color-bg-card: #ffffff;
+  --color-text: #2C2C2C;
+  --color-text-muted: #6c757d;
+  --color-border: #e8e0d8;
+  --color-late: #dc3545;
+
+  --font-family: 'Georgia', 'Times New Roman', serif;
+  --font-family-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 2px 8px rgba(114, 47, 55, 0.08);
+  --shadow-lg: 0 4px 16px rgba(114, 47, 55, 0.12);
+}
+
+/* Base */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-ui);
+  font-size: var(--font-size-base);
+}
+
+/* Navbar */
+.app-navbar {
+  background-color: var(--color-primary) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 0;
+}
+
+.app-navbar__brand {
+  color: #ffffff !important;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.app-navbar__username {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--font-size-sm);
+}
+
+.role-badge {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* Main content */
+main {
+  min-height: calc(100vh - 64px);
+  padding-bottom: 3rem;
+}
+
+/* Page layout */
+.page-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.page-title {
+  font-family: var(--font-family);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Cards */
+.section-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  background: var(--color-bg-card);
+}
+
+/* Login */
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem;
+}
+
+.login-card__title {
+  font-family: var(--font-family);
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.login-card__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Primary button override */
+.btn-primary-custom {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary-custom:hover:not(:disabled) {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+}
+
+/* Override Bootstrap primary color */
+.btn-primary {
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-hover-bg: var(--color-primary-dark);
+  --bs-btn-hover-border-color: var(--color-primary-dark);
+  --bs-btn-active-bg: var(--color-primary-dark);
+}
+
+/* Time slot grid */
+.slot-btn {
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.slot-btn--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.slot-btn:not(.slot-btn--disabled):hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Tables */
+.reservations-table th {
+  background-color: rgba(114, 47, 55, 0.06);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.reservations-table td {
+  vertical-align: middle;
+  font-size: var(--font-size-sm);
+}
+
+/* Detail list */
+.detail-list {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+.detail-list dt {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.detail-list dd {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+/* Accent color for highlights */
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Form focus override */
+.form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.2rem rgba(201, 168, 76, 0.25);
+}

@@ -1,0 +1,8 @@
+{
+  "reservations": [],
+  "users": [
+    { "id": "host-001", "username": "host", "password": "host123", "role": "host" },
+    { "id": "guest-001", "username": "alice", "password": "alice123", "role": "guest" },
+    { "id": "guest-002", "username": "bob", "password": "bob123", "role": "guest" }
+  ]
+}
