@@ -1,8 +1,94 @@
 {
-  "reservations": [],
+  "reservations": [
+    {
+      "id": "7ba22e70-4a5f-45a7-9477-956bfde3445e",
+      "name": "Jean",
+      "partySize": 5,
+      "datetime": "2026-04-27T20:00:00.000Z",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-04-27T03:59:20.768Z"
+    },
+    {
+      "id": "1e4ce307-9f4f-4141-be93-4f7720cedebb",
+      "name": "Jean",
+      "partySize": 6,
+      "datetime": "2026-04-27T16:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-04-27T03:59:47.371Z"
+    },
+    {
+      "id": "f8132246-102e-44e6-b0b6-e3cbc4c339b0",
+      "name": "Jean",
+      "partySize": 6,
+      "datetime": "2026-04-27T17:00:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-04-27T03:59:58.574Z"
+    },
+    {
+      "id": "c5b638f5-3faa-4842-b1e2-b7a8395e2cfc",
+      "name": "Bob",
+      "partySize": 1,
+      "datetime": "2026-04-27T09:30:00",
+      "notes": "",
+      "status": "Seated",
+      "userId": "guest-002",
+      "createdAt": "2026-04-27T04:00:23.014Z"
+    },
+    {
+      "id": "5bf1ee79-5265-4fdf-b034-46ed39aa1286",
+      "name": "Bob",
+      "partySize": 2,
+      "datetime": "2026-04-28T09:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-002",
+      "createdAt": "2026-04-27T04:00:34.933Z"
+    },
+    {
+      "id": "8e0db592-566d-40ea-9451-03b5a1b5d0c6",
+      "name": "Bob",
+      "partySize": 7,
+      "datetime": "2026-04-30T10:00:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-002",
+      "createdAt": "2026-04-27T04:00:47.786Z"
+    },
+    {
+      "id": "3ea32a91-fcfe-44c9-b223-7e7deb7af578",
+      "name": "Bob",
+      "partySize": 12,
+      "datetime": "2026-05-02T14:00:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-002",
+      "createdAt": "2026-04-27T04:01:08.919Z"
+    }
+  ],
   "users": [
-    { "id": "host-001", "username": "host", "password": "host123", "role": "host" },
-    { "id": "guest-001", "username": "alice", "password": "alice123", "role": "guest" },
-    { "id": "guest-002", "username": "bob", "password": "bob123", "role": "guest" }
+    {
+      "id": "host-001",
+      "username": "host",
+      "password": "host123",
+      "role": "host"
+    },
+    {
+      "id": "guest-001",
+      "username": "alice",
+      "password": "alice123",
+      "role": "guest"
+    },
+    {
+      "id": "guest-002",
+      "username": "bob",
+      "password": "bob123",
+      "role": "guest"
+    }
   ]
 }
