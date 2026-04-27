@@ -1,4 +1,6 @@
 # Guestly — Restaurant Reservation API
+![AI-Authored](https://img.shields.io/badge/Authored_by-Claude_Autonomous-blueviolet)
+![Environment](https://img.shields.io/badge/Env-Hardened_VM-green)
 
 Guestly is a full-stack restaurant reservation management app. This repo contains the Express.js backend API and a React/Vite frontend.
 
