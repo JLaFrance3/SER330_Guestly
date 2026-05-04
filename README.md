@@ -1,4 +1,5 @@
 # Guestly — Restaurant Reservation API
+
 ![AI-Authored](https://img.shields.io/badge/Authored_by-Claude_Autonomous-blueviolet)
 ![Environment](https://img.shields.io/badge/Env-Hardened_VM-green)
 
@@ -27,21 +28,21 @@ npm run dev
 
 ### Other scripts
 
-| Script | Description |
-|--------|-------------|
-| `npm start` | Run API server (production) |
+| Script           | Description                              |
+| ---------------- | ---------------------------------------- |
+| `npm start`      | Run API server (production)              |
 | `npm run server` | Run API server with nodemon (watch mode) |
-| `npm run client` | Run frontend dev server only |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Run Prettier |
+| `npm run client` | Run frontend dev server only             |
+| `npm run lint`   | Run ESLint                               |
+| `npm run format` | Run Prettier                             |
 
 ## Default Credentials
 
-| Username | Password | Role |
-|----------|----------|------|
-| host | host123 | host |
-| alice | alice123 | guest |
-| bob | bob123 | guest |
+| Username | Password | Role  |
+| -------- | -------- | ----- |
+| host     | host123  | host  |
+| alice    | alice123 | guest |
+| bob      | bob123   | guest |
 
 ## Authentication
 
@@ -50,6 +51,7 @@ All reservation endpoints require a Bearer token obtained via login.
 **Token format:** Base64-encoded JSON `{ id, username, role }`
 
 Include in requests:
+
 ```
 Authorization: Bearer <token>
 ```
@@ -61,14 +63,17 @@ Authorization: Bearer <token>
 ### Auth
 
 #### POST /api/auth/login
+
 Login and receive a session token.
 
 **Request body:**
+
 ```json
 { "username": "host", "password": "host123" }
 ```
 
 **Response:**
+
 ```json
 {
   "token": "<base64-token>",
@@ -83,6 +88,7 @@ Login and receive a session token.
 All endpoints require `Authorization: Bearer <token>`.
 
 #### GET /api/reservations
+
 Get reservations. Hosts see all; guests see only their own.
 
 **Response:** Array of reservation objects.
@@ -90,11 +96,13 @@ Get reservations. Hosts see all; guests see only their own.
 ---
 
 #### POST /api/reservations
+
 Create a new reservation.
 
 **Auth:** Any authenticated user
 
 **Request body:**
+
 ```json
 {
   "name": "Alice Smith",
@@ -107,16 +115,19 @@ Create a new reservation.
 **Response (201):** Created reservation object with `status: "Confirmed"`.
 
 **Errors:**
+
 - `400` — Missing/invalid fields, or partySize > 12 (`"Max Capacity Exceeded"`)
 
 ---
 
 #### GET /api/reservations/availability?date=YYYY-MM-DD
+
 Get available 30-minute slots for a date. A slot is unavailable when total confirmed/seated party sizes >= 50.
 
 **Auth:** Any authenticated user
 
 **Response:**
+
 ```json
 [
   { "time": "2024-08-15T09:00:00", "available": true, "remainingCapacity": 50 },
@@ -127,6 +138,7 @@ Get available 30-minute slots for a date. A slot is unavailable when total confi
 ---
 
 #### GET /api/reservations/:id
+
 Get a single reservation by ID.
 
 **Auth:** Host (any), Guest (own only)
@@ -134,11 +146,13 @@ Get a single reservation by ID.
 ---
 
 #### PATCH /api/reservations/:id/status
+
 Update reservation status.
 
 **Auth:** Host can set any status. Guest can only set `"Cancelled"` (and not when status is already `"Seated"`).
 
 **Request body:**
+
 ```json
 { "status": "Seated" }
 ```
@@ -146,11 +160,13 @@ Update reservation status.
 Valid statuses: `Confirmed`, `Seated`, `Completed`, `Cancelled`
 
 **Errors:**
+
 - `403` — Guest trying to set non-Cancelled status, or cancelling a Seated reservation
 
 ---
 
 #### PATCH /api/reservations/:id
+
 Update reservation details (name, partySize, datetime, notes).
 
 **Auth:** Host (any time). Guest blocked within 30 minutes of reservation time.
@@ -158,12 +174,14 @@ Update reservation details (name, partySize, datetime, notes).
 **Request body:** Any subset of `{ name, partySize, datetime, notes }`
 
 **Errors:**
+
 - `403` — Guest editing within 30 min: `{ "error": "Contact Host" }`
 - `400` — Invalid field values or partySize > 12
 
 ---
 
 #### DELETE /api/reservations/:id
+
 Soft-cancel a reservation (sets status to `"Cancelled"`).
 
 **Auth:** Host (any). Guest (own only, not if already `"Seated"`).
@@ -171,11 +189,13 @@ Soft-cancel a reservation (sets status to `"Cancelled"`).
 ---
 
 #### POST /api/reservations/walkin
+
 Host-only. Create a walk-in reservation with status immediately set to `"Seated"`.
 
 **Auth:** Host only
 
 **Request body:**
+
 ```json
 {
   "name": "Walk-in Party",
@@ -208,3 +228,5 @@ All data is persisted in `database.json` at the project root using synchronous f
 ```
 
 Possible statuses: `Confirmed`, `Seated`, `Completed`, `Cancelled`
+
+Trying to get SonarCloud to scan this...
