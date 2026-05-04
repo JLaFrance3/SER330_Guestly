@@ -228,5 +228,3 @@ All data is persisted in `database.json` at the project root using synchronous f
 ```
 
 Possible statuses: `Confirmed`, `Seated`, `Completed`, `Cancelled`
-
-Trying to get SonarCloud to scan this...
