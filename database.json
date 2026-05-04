@@ -69,6 +69,136 @@
       "status": "Confirmed",
       "userId": "guest-002",
       "createdAt": "2026-04-27T04:01:08.919Z"
+    },
+    {
+      "id": "tc02-seed-a",
+      "name": "Taylor Group",
+      "partySize": 12,
+      "datetime": "2026-05-04T18:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:00.000Z"
+    },
+    {
+      "id": "tc02-seed-b",
+      "name": "Morgan Party",
+      "partySize": 12,
+      "datetime": "2026-05-04T18:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-002",
+      "createdAt": "2026-05-04T00:00:01.000Z"
+    },
+    {
+      "id": "tc02-seed-c",
+      "name": "Rivera Group",
+      "partySize": 12,
+      "datetime": "2026-05-04T18:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:02.000Z"
+    },
+    {
+      "id": "tc02-seed-d",
+      "name": "Chen Party",
+      "partySize": 12,
+      "datetime": "2026-05-04T18:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-002",
+      "createdAt": "2026-05-04T00:00:03.000Z"
+    },
+    {
+      "id": "tc02-seed-e",
+      "name": "Kim Duo",
+      "partySize": 2,
+      "datetime": "2026-05-04T18:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:04.000Z"
+    },
+    {
+      "id": "eb88665a-33ca-4d6c-9065-5712aa9a41da",
+      "name": "Alice Smith",
+      "partySize": 4,
+      "datetime": "2026-05-04T19:00:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T02:16:58.197Z"
+    },
+    {
+      "id": "29d7635a-3c48-460b-ae96-f2389b693925",
+      "name": "Alice Smith",
+      "partySize": 4,
+      "datetime": "2026-05-04T19:30:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T02:17:32.284Z"
+    },
+    {
+      "id": "R-001",
+      "name": "Alice Smith",
+      "partySize": 2,
+      "datetime": "2026-05-10T19:00:00",
+      "notes": "",
+      "status": "Seated",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:00.000Z"
+    },
+    {
+      "id": "R-002",
+      "name": "Alice Smith",
+      "partySize": 2,
+      "datetime": "2026-05-10T19:00:00",
+      "notes": "",
+      "status": "Cancelled",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:00.000Z"
+    },
+    {
+      "id": "R-003",
+      "name": "Alice Smith",
+      "partySize": 2,
+      "datetime": "2026-05-10T20:00:00",
+      "notes": "",
+      "status": "Seated",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:00.000Z"
+    },
+    {
+      "id": "fae9d2db-f047-4397-9237-74ea5fb72d58",
+      "name": "Bob Jones",
+      "partySize": 2,
+      "datetime": "2026-05-04T14:00:00",
+      "notes": "",
+      "status": "Seated",
+      "userId": "guest-002",
+      "createdAt": "2026-05-04T02:26:51.200Z"
+    },
+    {
+      "id": "R-004",
+      "name": "Alice Smith",
+      "partySize": 2,
+      "datetime": "2026-05-04T03:21:43.937Z",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T00:00:00.000Z"
+    },
+    {
+      "id": "82f8d94b-b90a-48d4-98b7-cc269e938cf5",
+      "name": "Large Party",
+      "partySize": 12,
+      "datetime": "2026-05-04T20:00:00",
+      "notes": "",
+      "status": "Confirmed",
+      "userId": "guest-001",
+      "createdAt": "2026-05-04T02:45:28.030Z"
     }
   ],
   "users": [
