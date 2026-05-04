@@ -15,8 +15,10 @@ app.use('/api/reservations', reservationRoutes);
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
 
-app.listen(PORT, () => {
-  console.log(`Guestly API running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Guestly API running on http://localhost:${PORT}`);
+  });
+}
 
 module.exports = app;
